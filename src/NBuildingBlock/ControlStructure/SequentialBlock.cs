@@ -6,14 +6,9 @@ namespace NBuildingBlock.ControlStructure
     {
         public SequentialBlock(IBlock<TInput, TMiddle> firstBlock, IBlock<TMiddle, TOutput> nextBlock)
         {
-            Handle = input =>
-                     {
-                         var temp = firstBlock.Handle(input);
-
-                         return nextBlock.Handle(temp);
-                     };
+            Handle = input => nextBlock.Handle(firstBlock.Handle(input));
         }
 
-        public Func<TInput, TOutput> Handle { get; private set; }
+        public Func<TInput, TOutput> Handle { get; }
     }
 }

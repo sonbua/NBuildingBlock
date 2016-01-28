@@ -38,10 +38,12 @@
     <Compile Include="Block.cs" />
     <Compile Include="BlockExtensions.cs" />
     <Compile Include="CastOperatorBlock.cs" />
+    <Compile Include="ControlStructure\AnonymousBlock.cs" />
     <Compile Include="ControlStructure\CpuBoundTaskBlock.cs" />
     <Compile Include="ControlStructure\IfElseBlock.cs" />
     <Compile Include="ControlStructure\ResultSynchronizationBlock.cs" />
     <Compile Include="ControlStructure\SequentialBlock.cs" />
+    <Compile Include="FuncExtensions.cs" />
     <Compile Include="IBlock.cs" />
     <Compile Include="Linq\AllBlock.cs" />
     <Compile Include="Linq\AnyBlock.cs" />
